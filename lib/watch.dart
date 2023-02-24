@@ -193,19 +193,17 @@ class PostWithVid extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  left: 170,
+                  left: 160,
                   top: 100,
                   child: CircularProgressIndicator(
                     color: Colors.white,
                   ),
                 ),
                 const Positioned(
-                    bottom: 10,
-                    right: 15,
-                    child: Icon(
-                      Icons.volume_off_rounded,
-                      color: Colors.white,
-                    ))
+                  bottom: 5,
+                  right: 10,
+                  child: OnSound(),
+                )
               ])),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
@@ -317,5 +315,42 @@ class _LikeState extends State<Like> {
             ))
       ],
     );
+  }
+}
+
+class OnSound extends StatefulWidget {
+  const OnSound({super.key});
+
+  @override
+  State<OnSound> createState() => _OnSoundState();
+}
+
+class _OnSoundState extends State<OnSound> {
+  bool playAudio = false;
+  @override
+  Widget build(BuildContext context) {
+    return playAudio
+        ? IconButton(
+            onPressed: (() {
+              setState(() {
+                playAudio = !playAudio;
+              });
+            }),
+            icon: const Icon(
+              Icons.volume_up,
+              color: Colors.white,
+            ),
+          )
+        : IconButton(
+            onPressed: (() {
+              setState(() {
+                playAudio = !playAudio;
+              });
+            }),
+            icon: const Icon(
+              Icons.volume_off,
+              color: Colors.white,
+            ),
+          );
   }
 }
