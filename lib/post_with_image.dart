@@ -84,8 +84,7 @@ class PostWithImg extends StatelessWidget {
           Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
-              child: Container(
-                color: Colors.red,
+              child: SizedBox(
                 height: 220,
                 width: double.infinity,
                 child: Image.network(
@@ -95,7 +94,7 @@ class PostWithImg extends StatelessWidget {
                 ),
               )),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
             child: Row(
               children: [
                 Row(
@@ -121,10 +120,6 @@ class PostWithImg extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    Text(
-                      '92',
-                      style: TextStyle(color: Colors.grey),
-                    )
                   ],
                 )
               ],

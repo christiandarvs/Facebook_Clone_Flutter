@@ -89,7 +89,7 @@ class PostContent extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
             child: Row(
               children: [
                 Row(
@@ -115,10 +115,6 @@ class PostContent extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    Text(
-                      '92',
-                      style: TextStyle(color: Colors.grey),
-                    )
                   ],
                 )
               ],
