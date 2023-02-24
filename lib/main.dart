@@ -276,7 +276,7 @@ class _PostContentState extends State<PostContent> {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xff242527),
-      height: 300,
+      height: 315,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -1154,6 +1154,12 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Icon> icons = [
+      const Icon(
+        Icons.bookmark_outlined,
+        color: Colors.deepPurple,
+      )
+    ];
     return ListView(
       children: [
         Padding(
@@ -1282,7 +1288,19 @@ class Menu extends StatelessWidget {
                       )),
                 );
               })),
-        )
+        ),
+        SizedBox(
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            child: ElevatedButton(
+              onPressed: (() {}),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xff2f3130)),
+              child: const Text('Log out'),
+            ),
+          ),
+        ),
       ],
     );
   }
