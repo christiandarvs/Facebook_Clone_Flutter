@@ -2,6 +2,7 @@ import 'package:fb_clone/friend_request.dart';
 import 'package:fb_clone/home.dart';
 import 'package:fb_clone/marketplace.dart';
 import 'package:fb_clone/menu.dart';
+import 'package:fb_clone/notifications.dart';
 import 'package:fb_clone/watch.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -115,7 +116,7 @@ class MyApp extends StatelessWidget {
                 FriendRequest(),
                 Watch(),
                 MarketPlace(),
-                Text('5'),
+                Notifications(),
                 Menu(),
               ],
             ),

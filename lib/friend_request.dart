@@ -6,6 +6,16 @@ class FriendRequest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> imgURL = [
+      'https://images.pexels.com/photos/3170635/pexels-photo-3170635.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/5220075/pexels-photo-5220075.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/9950569/pexels-photo-9950569.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1090387/pexels-photo-1090387.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/5455609/pexels-photo-5455609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'https://images.pexels.com/photos/15568433/pexels-photo-15568433.jpeg?auto=compress&cs=tinysrgb&w=600'
+    ];
     return ListView(
       children: [
         Padding(
@@ -104,14 +114,14 @@ class FriendRequest extends StatelessWidget {
             shrinkWrap: true,
             itemBuilder: ((context, index) {
               return ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                contentPadding: const EdgeInsets.all(10),
                 title: const Text(
                   'saddas',
                   style: TextStyle(color: Colors.white),
                 ),
-                leading: const CircleAvatar(
+                leading: CircleAvatar(
                   radius: 40,
+                  backgroundImage: NetworkImage(imgURL[index]),
                 ),
                 subtitle: Row(
                   children: [
