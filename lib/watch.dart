@@ -92,7 +92,7 @@ class Watch extends StatelessWidget {
             imgURL: 'https://i.ytimg.com/vi/H7ApA8E42jM/maxresdefault.jpg',
             datePosted: 1,
             dp: 'https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/296787303_3694236854052206_3859153378381456912_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFWCvkVK4H0vUapCV-w4KAkXEWmO3nlCNFcRaY7eeUI0ed6rS5Q_cluI9lHT1AeyP06Dk2WeZB_vfxBUdfiocbE&_nc_ohc=RbjL6WqFErsAX_4LQ6l&_nc_ht=scontent.fmnl3-2.fna&oh=00_AfB0_Cntau0TWi3miXBbMFbLTgk28nKVQeVmNofX2RTABg&oe=63FCF107',
-            postHeight: 415)
+            postHeight: 410)
       ],
     );
   }

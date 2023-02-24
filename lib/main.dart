@@ -1,5 +1,6 @@
 import 'package:fb_clone/friend_request.dart';
 import 'package:fb_clone/home.dart';
+import 'package:fb_clone/marketplace.dart';
 import 'package:fb_clone/menu.dart';
 import 'package:fb_clone/watch.dart';
 import 'package:flutter/material.dart';
@@ -113,7 +114,7 @@ class MyApp extends StatelessWidget {
                 Home(),
                 FriendRequest(),
                 Watch(),
-                Text('4'),
+                MarketPlace(),
                 Text('5'),
                 Menu(),
               ],

@@ -6,7 +6,7 @@ class FriendRequest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -89,51 +89,53 @@ class FriendRequest extends StatelessWidget {
                 ],
               ),
               TextButton(
-                  onPressed: (() {}),
-                  child: const Text(
-                    'See all',
-                    style: TextStyle(fontSize: 18),
-                  ))
+                onPressed: (() {}),
+                child: const Text(
+                  'See all',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
             ],
           ),
         ),
-        Expanded(
-          child: ListView.builder(
-              itemCount: 8,
-              itemBuilder: ((context, index) {
-                return ListTile(
-                  contentPadding: const EdgeInsets.all(20),
-                  title: const Text(
-                    'dasdsda',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  leading: const CircleAvatar(
-                    radius: 40,
-                  ),
-                  subtitle: Row(
-                    children: [
-                      SizedBox(
-                        width: 100,
-                        child: ElevatedButton(
-                            onPressed: (() {}), child: const Text('Confirm')),
+        ListView.builder(
+            itemCount: 8,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: ((context, index) {
+              return ListTile(
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                title: const Text(
+                  'saddas',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: const CircleAvatar(
+                  radius: 40,
+                ),
+                subtitle: Row(
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      child: ElevatedButton(
+                          onPressed: (() {}), child: const Text('Confirm')),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: (() {}),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xff393a3c)),
+                        child: const Text('Delete'),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      SizedBox(
-                        width: 100,
-                        child: ElevatedButton(
-                          onPressed: (() {}),
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xff393a3c)),
-                          child: const Text('Delete'),
-                        ),
-                      )
-                    ],
-                  ),
-                );
-              })),
-        )
+                    )
+                  ],
+                ),
+              );
+            }))
       ],
     );
   }

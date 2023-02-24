@@ -152,37 +152,36 @@ class Menu extends StatelessWidget {
         //pero kapag gagamit ng .builder always wrap it sa sizedbox for height
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: SizedBox(
-            height: 490,
-            child: GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 12,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, mainAxisExtent: 80),
-                itemBuilder: ((context, index) {
-                  return InkWell(
-                    onTap: () {},
-                    child: Card(
-                      color: const Color(0xff333436),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            optionsIcons[index],
-                            Text(
-                              options[index],
-                              style: const TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: 12,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, mainAxisExtent: 80),
+              itemBuilder: ((context, index) {
+                return InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: const Color(0xff333436),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          optionsIcons[index],
+                          Text(
+                            options[index],
+                            style: const TextStyle(color: Colors.white),
+                          )
+                        ],
                       ),
                     ),
-                  );
-                })),
-          ),
+                  ),
+                );
+              })),
         ),
+
         const SizedBox(
           height: 5,
         ),
