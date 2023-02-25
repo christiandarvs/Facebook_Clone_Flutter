@@ -16,6 +16,17 @@ class FriendRequest extends StatelessWidget {
       'https://images.pexels.com/photos/5455609/pexels-photo-5455609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       'https://images.pexels.com/photos/15568433/pexels-photo-15568433.jpeg?auto=compress&cs=tinysrgb&w=600'
     ];
+    List<String> accountNames = [
+      'Joseph Hernandez',
+      'Terry Cooper',
+      'Mary Lopez',
+      'Pamela Morrison',
+      'Austin Ford',
+      'Matthew Smith',
+      'Kelly Perkins',
+      'John Thomas',
+      'Benjamin Evans'
+    ];
     return ListView(
       children: [
         Padding(
@@ -115,9 +126,9 @@ class FriendRequest extends StatelessWidget {
             itemBuilder: ((context, index) {
               return ListTile(
                 contentPadding: const EdgeInsets.all(10),
-                title: const Text(
-                  'saddas',
-                  style: TextStyle(color: Colors.white),
+                title: Text(
+                  accountNames[index],
+                  style: const TextStyle(color: Colors.white),
                 ),
                 leading: CircleAvatar(
                   radius: 40,
